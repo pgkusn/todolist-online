@@ -18,6 +18,7 @@
             type="text"
             class="js-todoContent"
             v-model="todo"
+            v-focus
             @keyup.enter="addTodo"
             placeholder="請輸入待辦事項"
           />
@@ -65,6 +66,7 @@
                   type="text"
                   data-type="submit"
                   v-model="item.content"
+                  v-focus
                   @keyup.enter="handleToolClick(item.id, $event)"
                 />
                 <span v-else data-type="edit" @dblclick="handleToolClick(item.id, $event)">{{
